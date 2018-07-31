@@ -1,9 +1,9 @@
 {
   "name": "cordova-plugin-album",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Native Photo album plugin for cordova",
   "cordova": {
-    "id": "com.elbozor.cordova.album",
+    "id": "cordova-plugin-album",
     "platforms": [
       "android"
     ]
