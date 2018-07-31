@@ -10,21 +10,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danielsogl/cordova-plugin-useragent.git"
+    "url": "git+https://github.com/amediateam/cordova-plugin-album.git"
   },
   "keywords": [
-    "user",
-    "agent",
-    "useragent",
-    "user-agent",
-    "ecosystem:cordova",
+    "photos",
+    "album",
     "cordova-android",
     "cordova-ios"
   ],
-  "author": "Daniel Sogl",
+  "author": "Azam Makhmudov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danielsogl/cordova-plugin-useragent/issues"
+    "url": "https://github.com/amediateam/cordova-plugin-album/issues"
   },
-  "homepage": "https://github.com/danielsogl/cordova-plugin-useragent#readme"
+  "homepage": "https://github.com/amediateam/cordova-plugin-album#readme"
 }
