@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	id="com.elbozor.cordova.PhotoAlbum"
+	version="0.0.1">
+	<engines>
+		<engine name="cordova" version=">=4.0.0" />
+	</engines>
+	<name>Photo Album</name>
+	<description>Native Photo album plugin for cordova</description>
+	<author>Azam Makhmudov</author>
+	<keywords>photo, photos, albums, cordova</keywords>
+	<license>MIT</license>
+
+	<js-module src="www/PhotoAlbum.js" name="PhotoAlbum">
+		<clobbers target="PhotoAlbum" />
+	</js-module>
+
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="PhotoAlbum" >
+				<param name="android-package" value="com.elbozor.cordova.PhotoAlbum"/>
+                <param name="onload" value="true" />
+			</feature>
+		</config-file>
+		<source-file src="src/android/PhotoAlbum.java" target-dir="src/com/elbozor/cordova/PhotoAlbum" />
+	</platform>
+
+	<platform name="ios">
+		<plugins-plist key="PhotoAlbum" string="PhotoAlbum" />
+		<config-file target="config.xml" parent="/*">
+			<feature name="PhotoAlbum">
+				<param name="ios-package" value="PhotoAlbum" />
+			</feature>
+		</config-file>
+		<header-file src="src/ios/PhotoAlbum.h" />
+		<source-file src="src/ios/PhotoAlbum.m" />
+	</platform>
+
+</plugin>
