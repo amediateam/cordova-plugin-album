@@ -22,35 +22,38 @@ public class PhotoAlbum extends CordovaPlugin {
             super.initialize(cordova, webView);
 
             try{
+
                 settings = ((WebView) webView.getEngine().getView()).getSettings();
 
-            } catch (Exception error){
+            }catch (Exception error){
+
                 settings = null;
+
             }
         }
 
         @Override
         public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-            try {
-                if (action.equals("set")) {
-                    String text = args.getString(0);
-                    settings.setUserAgentString(text);
-                    callbackContext.success(settings.getUserAgentString());
-                    return true;
-                } else if (action.equals("get")) {
-                    callbackContext.success(settings.getUserAgentString());
-                    return true;
-                } else if (action.equals("reset")) {
-                    settings.setUserAgentString(null);
-                    callbackContext.success(settings.getUserAgentString());
-                    return true;
-                }
-                callbackContext.error("Invalid action");
-                return false;
-            } catch (Exception e) {
-                callbackContext.error(e.getMessage());
-                return false;
-            }
-	    }
+               try {
+                  if (action.equals("set")) {
+                     String text = args.getString(0);
+                     settings.setUserAgentString(text);
+                     callbackContext.success(settings.getUserAgentString());
+                     return true;
+                   } else if (action.equals("get")) {
+                     callbackContext.success(settings.getUserAgentString());
+                     return true;
+                   } else if (action.equals("reset")) {
+                     settings.setUserAgentString(null);
+                     callbackContext.success(settings.getUserAgentString());
+                     return true;
+                  }
+                  callbackContext.error("Invalid action");
+                  return false;
+                } catch (Exception e) {
+                  callbackContext.error(e.getMessage());
+                  return false;
+               }
+	}
 
 }

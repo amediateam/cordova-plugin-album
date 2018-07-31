@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-album",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Native Photo album plugin for cordova",
   "cordova": {
     "id": "cordova-plugin-album",
